@@ -12,3 +12,6 @@ df.columns
 
 # save data as csv in data/raw
 df.to_csv('data/raw/NYC_Leading_Causes_of_Death.csv', index=False)
+
+sample_df = df.sample(10)
+sample_df.to_csv('data/raw/NYC_Leading_Causes_of_Death_Sample.csv', index=False)

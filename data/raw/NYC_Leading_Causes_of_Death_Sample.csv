@@ -1,0 +1,11 @@
+year,leading_cause,sex,race_ethnicity,deaths,death_rate,age_adjusted_death_rate
+2014,Alzheimer's Disease (G30),F,Black Non-Hispanic,123,11.7,9.2
+2008,Alzheimer's Disease (G30),F,White Non-Hispanic,151,10.5,5.1
+2010,Septicemia (A40-A41),F,White Non-Hispanic,107,7.5,4.3
+2007,Diabetes Mellitus (E10-E14),F,Black Non-Hispanic,358,34,32.5
+2008,Influenza (Flu) and Pneumonia (J09-J18),F,Not Stated/Unknown,14,.,.
+2014,"Essential Hypertension and Renal Diseases (I10, I12)",M,White Non-Hispanic,175,13,10.5
+2012,"Diseases of Heart (I00-I09, I11, I13, I20-I51)",F,Not Stated/Unknown,76,.,.
+2014,All Other Causes,M,Hispanic,1195,100.1,143.3
+2010,"Intentional Self-Harm (Suicide: X60-X84, Y87.0)",M,Asian and Pacific Islander,46,8.8,8.7
+2009,Malignant Neoplasms (Cancer: C00-C97),F,White Non-Hispanic,3346,232.9,159
