@@ -35,7 +35,6 @@ conn_string = (
 # Create a database engine
 db_engine = create_engine(conn_string, echo=False)
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -91,10 +90,7 @@ def data():
     query_nyc = "SELECT * FROM nyc"
     df_nyc = read_sql(query_nyc, db_engine)
     data_nyc = df_nyc.to_dict(orient='records')
-    
-    # Pass user as None in the context
     user = session.get('user')
-    
     return render_template('data.html', data=data_nyc, user=user)
 
 if __name__ == '__main__':

@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 from pandas import read_sql, DataFrame
 from sqlalchemy import create_engine, inspect
-
 from db.python_populate import insert_data
 
 # Load environment variables from .env file
