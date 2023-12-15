@@ -4,6 +4,9 @@ from authlib.common.security import generate_token
 from dotenv import load_dotenv
 import os
 from db_functions import update_or_create_user
+import pandas as pd
+from pandas import read_sql
+from sqlalchemy import create_engine, inspect
 
 load_dotenv()
 
@@ -14,6 +17,24 @@ GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
 app = Flask(__name__)
 app.secret_key = os.urandom(12)
 oauth = OAuth(app)
+
+# Database connection settings from environment variables
+DB_HOST = os.getenv("DB_HOST")
+DB_DATABASE = os.getenv("DB_DATABASE")
+DB_USERNAME = os.getenv("DB_USERNAME")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_PORT = int(os.getenv("DB_PORT", 3306))
+DB_CHARSET = os.getenv("DB_CHARSET", "utf8mb4")
+
+# Connection string
+conn_string = (
+    f"mysql+pymysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_DATABASE}"
+    f"?charset={DB_CHARSET}"
+)
+
+# Create a database engine
+db_engine = create_engine(conn_string, echo=False)
+
 
 @app.route('/')
 def index():
@@ -40,7 +61,7 @@ def google():
     session['nonce'] = generate_token()
     ##, note: if running in google shell, need to override redirect_uri 
     ## to the external web address of the shell, e.g.,
-    redirect_uri = 'http://127.0.0.1:5000/google/auth/'
+    # redirect_uri = 'https://5000-cs-213132341638-default.cs-us-east1-pkhd.cloudshell.dev/google/auth/'
     return oauth.google.authorize_redirect(redirect_uri, nonce=session['nonce'])
 
 @app.route('/google/auth/')
@@ -64,6 +85,17 @@ def dashboard():
 def logout():
     session.pop('user', None)
     return redirect('/')
+
+@app.route('/data')
+def data():
+    query_nyc = "SELECT * FROM nyc"
+    df_nyc = read_sql(query_nyc, db_engine)
+    data_nyc = df_nyc.to_dict(orient='records')
+    
+    # Pass user as None in the context
+    user = session.get('user')
+    
+    return render_template('data.html', data=data_nyc, user=user)
 
 if __name__ == '__main__':
     app.run(

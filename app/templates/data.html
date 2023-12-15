@@ -1,0 +1,75 @@
+{% extends "dashboard.html" %} 
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #000;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: rgba(0, 183, 255, 0.452);
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Leading Cause</th>
+                <th>Sex</th>
+                <th>Race Ethnicity</th>
+                <th>Deaths</th>
+                <th>Death Rate</th>
+                <th>Age-Adjusted Death Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data%}
+            <tr>
+                <td>{{ row.id }}</td>
+                <td>{{ row.year }}</td>
+                <td>{{ row.leading_cause }}</td>
+                <td>{{ row.sex }}</td>
+                <td>{{ row.race_ethnicity }}</td>
+                <td>{{ row.deaths }}</td>
+                <td>{{ row.death_rate }}</td>
+                <td>{{ row.age_adjusted_death_rate }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+{% endblock %}
