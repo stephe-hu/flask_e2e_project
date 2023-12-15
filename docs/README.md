@@ -22,3 +22,6 @@
 5. Use MySQl Workbench to connect to the database.
 6. Create a Python script to connect to the database.
 7. Create a Python script to insert data into database.
+8. Create flask app to display data from database.
+9. Test run app on docker.
+9. Deploy app to Azure.

@@ -94,7 +94,4 @@ def data():
     return render_template('data.html', data=data_nyc, user=user)
 
 if __name__ == '__main__':
-    app.run(
-        debug=True, 
-        port=5000
-    )
+    app.run(debug=True, host='0.0.0.0')
