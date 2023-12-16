@@ -7,17 +7,24 @@ from db_functions import update_or_create_user
 import pandas as pd
 from pandas import read_sql
 from sqlalchemy import create_engine, inspect
+import logging
 
 load_dotenv()
 
 GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
 GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
 
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename="logs/app.log",
+    filemode="w",
+    format='%(levelname)s - %(name)s - %(message)s'
+)
 
 app = Flask(__name__)
 app.secret_key = os.urandom(12)
 oauth = OAuth(app)
-
+    
 # Database connection settings from environment variables
 DB_HOST = os.getenv("DB_HOST")
 DB_DATABASE = os.getenv("DB_DATABASE")
@@ -37,7 +44,12 @@ db_engine = create_engine(conn_string, echo=False)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    try:
+        logging.debug("Success! Index page has been accessed")
+        return render_template('index.html')
+    except Exception as e:
+        logging.error(f"An error occurred! {e}")
+        return "Try again"
 
 @app.route('/google/')
 def google():
