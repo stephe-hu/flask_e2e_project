@@ -4,3 +4,27 @@ INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:15:15] "[32mGET /dashboard/ HTT
 DEBUG - root - Success! Index page has been accessed
 INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:15:15] "GET / HTTP/1.1" 200 -
 INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:15:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): accounts.google.com:443
+DEBUG - urllib3.connectionpool - https://accounts.google.com:443 "GET /.well-known/openid-configuration HTTP/1.1" 200 464
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:43:28] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://www.googleapis.com:443 "GET /oauth2/v3/certs HTTP/1.1" 200 740
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:43:30] "[32mGET /google/auth/?state=woFNcGscwboyRt4Uhyb4gwwLyHWEPu&code=4%2F0AfJohXmppLQ6FQBkK-mdN_JgGijMa8gq1dQVjHHMJKfNeFluUhDS2cCECCiBLBI79xI1og&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&hd=stonybrook.edu&prompt=none HTTP/1.1[0m" 302 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:43:30] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:43:30] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:09] "GET /data HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:18] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:18] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:19] "[32mGET /logout HTTP/1.1[0m" 302 -
+DEBUG - root - Success! Index page has been accessed
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:19] "GET / HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:19] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:21] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:22] "[32mGET /google/auth/?state=47KdBXbqAAPbBtDuEik8b5e5EcUk59&code=4%2F0AfJohXkg--W6827L8eXgD4vuLRxgr3KxIR3aDY797deSyhU5bOBRnIRoE8pjXkmVC_Sr-Q&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&hd=stonybrook.edu&prompt=none HTTP/1.1[0m" 302 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:22] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:27] "GET /data HTTP/1.1" 200 -
