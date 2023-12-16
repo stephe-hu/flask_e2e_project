@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/b6d86f35-3491-4f20-a93c-7731d48ba7e7/resourceGroups/Stephen.Hu_rg_5705/providers/Microsoft.Web/sites/stephen-az-flask",
+    "appService.deploySubpath": "."
+}
