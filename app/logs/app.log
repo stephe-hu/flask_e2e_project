@@ -28,3 +28,20 @@ INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:22] "[32mGET /google/auth/?s
 INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:22] "GET /dashboard/ HTTP/1.1" 200 -
 INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
 INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:44:27] "GET /data HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:45:49] "[35m[1mGET /google/auth/ HTTP/1.1[0m" 500 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:45:49] "GET /google/auth/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:45:49] "GET /google/auth/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:45:49] "GET /google/auth/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:45:49] "[36mGET /google/auth/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:45:56] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:45:57] "[32mGET /google/auth/?state=7yy8G7iXu81hZXVrklXEQEsJoSoDQi&code=4%2F0AfJohXlOdSvEGUh40_sc-PWbKRjD19BlGh-R2zqxvs3hN6cQIGwnTaVYUXDtQraBXmsxLA&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&hd=stonybrook.edu&prompt=none HTTP/1.1[0m" 302 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:45:57] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:45:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:46:04] "[32mGET /google/ HTTP/1.1[0m" 302 -
+DEBUG - urllib3.connectionpool - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG - urllib3.connectionpool - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:46:06] "[32mGET /google/auth/?state=DpAYDxXtBhxs5QeReR90GyY46vgVjt&code=4%2F0AfJohXmbG-Ejq2R4U-taotfLIJNUipdoq57WWeZk8EzNWEuG5jHO4MB10cvyb6bOMbU7pw&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&hd=stonybrook.edu&prompt=none HTTP/1.1[0m" 302 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:46:06] "GET /dashboard/ HTTP/1.1" 200 -
+INFO - werkzeug - 127.0.0.1 - - [16/Dec/2023 16:46:06] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
