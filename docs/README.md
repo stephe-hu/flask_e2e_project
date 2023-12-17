@@ -21,7 +21,7 @@ This is a flask app that displays data from the NYC Leading Causes of Death data
 + More information about each process can be found in the respective scripts.
 1. Extracting Data from API using [this link](https://data.cityofnewyork.us/Health/New-York-City-Leading-Causes-of-Death/jb7j-dtam/explore/query/.SELECT%0A%20%20%60year%60%2C%0A%20%20%60leading_cause%60%2C%0A%20%20%60sex%60%2C%0A%20%20%60race_ethnicity%60%2C%0A%20%20%60deaths%60%2C%0A%20%20%60death_rate%60%2C%0A%20%20%60age_adjusted_death_rate%60%0AORDER%20BY%20%60year%60%20DESC%20NULL%20FIRST/page/filter).
 2. Login to [Azure Portal](https://portal.azure.com/#home) and deploy a MySQL database and web app.
-3. Login in to [Google Cloud](https://console.cloud.google.com/) and enable the Google+ API and create credentials for OAuth.
+3. Login to [Google Cloud](https://console.cloud.google.com/) and enable the Google+ API and create credentials for OAuth.
 4. Use SQLAlchemy to connect to the database and create a schema.
 5. Use alembic to create a migration script.
 6. Use MySQl Workbench to connect to the database.
